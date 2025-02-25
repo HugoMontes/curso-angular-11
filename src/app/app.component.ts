@@ -1,15 +1,25 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  DoCheck,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnChanges, OnInit {
+export class AppComponent implements OnChanges, OnInit, DoCheck {
   title = 'curso-angular-11';
 
   constructor() {
     console.log('APP-COMPONENT >> CONSTRUCTOR');
+  }
+
+  ngDoCheck(): void {
+    console.log('APP-COMPONENT >> ngDoCheck');
   }
 
   ngOnInit(): void {
