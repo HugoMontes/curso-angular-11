@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curso-angular-11';
+
+  getMessage(value: string): void {
+    console.log(value);
+  }
 }
