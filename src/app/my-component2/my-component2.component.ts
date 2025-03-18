@@ -1,4 +1,5 @@
 import {
+  AfterContentChecked,
   AfterContentInit,
   Component,
   ContentChild,
@@ -13,11 +14,16 @@ import { MyComponent1Component } from '../my-component1/my-component1.component'
   styleUrl: './my-component2.component.scss',
 })
 export class MyComponent2Component
-  implements OnInit, DoCheck, AfterContentInit
+  implements OnInit, DoCheck, AfterContentInit, AfterContentChecked
 {
   @ContentChild('childComponent2') contentChild:
     | MyComponent1Component
     | undefined;
+
+  ngAfterContentChecked(): void {
+    console.log('--COMPONENTE 2 - ngAfterContentChecked');
+    console.log(this.contentChild);
+  }
 
   ngOnInit(): void {
     console.log('--COMPONENTE 2 - ngOnInit');

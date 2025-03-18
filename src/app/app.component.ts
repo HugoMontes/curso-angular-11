@@ -1,9 +1,9 @@
 import {
   Component,
-  DoCheck,
-  OnChanges,
-  OnInit,
-  SimpleChanges,
+  // DoCheck,
+  // OnChanges,
+  // OnInit,
+  // SimpleChanges,
 } from '@angular/core';
 
 @Component({
@@ -11,25 +11,27 @@ import {
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnChanges, OnInit, DoCheck {
+export class AppComponent /*implements OnChanges, OnInit, DoCheck*/ {
   title = 'curso-angular-11';
 
+  show = false;
+
   constructor() {
-    console.log('APP-COMPONENT >> CONSTRUCTOR');
+    // console.log('APP-COMPONENT >> CONSTRUCTOR');
   }
 
-  ngDoCheck(): void {
-    console.log('APP-COMPONENT >> ngDoCheck');
-  }
+  // ngDoCheck(): void {
+  //   console.log('APP-COMPONENT >> ngDoCheck');
+  // }
 
-  ngOnInit(): void {
-    console.log('APP-COMPONENT >> ngOnInit');
-  }
+  // ngOnInit(): void {
+  //   console.log('APP-COMPONENT >> ngOnInit');
+  // }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('APP-COMPONENT >> ngOnChanges');
-    console.log(changes);
-  }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   console.log('APP-COMPONENT >> ngOnChanges');
+  //   console.log(changes);
+  // }
 
   getMessage(value: string): void {
     console.log(value);
@@ -37,5 +39,6 @@ export class AppComponent implements OnChanges, OnInit, DoCheck {
 
   clickChangeTitle(): void {
     this.title = 'CAMBIANDO.....';
+    this.show = !this.show;
   }
 }
