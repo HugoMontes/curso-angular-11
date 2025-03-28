@@ -1,32 +1,46 @@
 import {
+  AfterViewInit,
   Component,
-  // DoCheck,
+  DoCheck,
+  OnInit,
+  ViewChild,
   // OnChanges,
-  // OnInit,
   // SimpleChanges,
 } from '@angular/core';
+import { MyComponent2Component } from './my-component2/my-component2.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent /*implements OnChanges, OnInit, DoCheck*/ {
+export class AppComponent
+  implements /*OnChanges,*/ OnInit, DoCheck, AfterViewInit
+{
   title = 'curso-angular-11';
-
   show = false;
+  @ViewChild(MyComponent2Component) viewChild:
+    | MyComponent2Component
+    | undefined;
 
   constructor() {
-    // console.log('APP-COMPONENT >> CONSTRUCTOR');
+    console.log('APP-COMPONENT >> CONSTRUCTOR');
   }
 
-  // ngDoCheck(): void {
-  //   console.log('APP-COMPONENT >> ngDoCheck');
-  // }
+  ngAfterViewInit(): void {
+    console.log('APP-COMPONENT >> ngAfterViewInit');
+    console.log(this.viewChild);
+  }
 
-  // ngOnInit(): void {
-  //   console.log('APP-COMPONENT >> ngOnInit');
-  // }
+  ngDoCheck(): void {
+    console.log('APP-COMPONENT >> ngDoCheck');
+    console.log(this.viewChild);
+  }
+
+  ngOnInit(): void {
+    console.log('APP-COMPONENT >> ngOnInit');
+    console.log(this.viewChild);
+  }
 
   // ngOnChanges(changes: SimpleChanges): void {
   //   console.log('APP-COMPONENT >> ngOnChanges');
