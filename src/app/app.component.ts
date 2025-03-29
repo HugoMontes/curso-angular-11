@@ -18,7 +18,7 @@ export class AppComponent
   implements /*OnChanges,*/ OnInit, DoCheck, AfterViewInit
 {
   title = 'curso-angular-11';
-  show = false;
+  show = true;
   @ViewChild(MyComponent2Component) viewChild:
     | MyComponent2Component
     | undefined;

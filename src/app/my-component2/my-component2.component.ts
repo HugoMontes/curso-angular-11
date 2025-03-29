@@ -4,6 +4,7 @@ import {
   Component,
   ContentChild,
   DoCheck,
+  OnDestroy,
   OnInit,
 } from '@angular/core';
 import { MyComponent1Component } from '../my-component1/my-component1.component';
@@ -14,11 +15,15 @@ import { MyComponent1Component } from '../my-component1/my-component1.component'
   styleUrl: './my-component2.component.scss',
 })
 export class MyComponent2Component
-  implements OnInit, DoCheck, AfterContentInit, AfterContentChecked
+  implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, OnDestroy
 {
   @ContentChild('childComponent2') contentChild:
     | MyComponent1Component
     | undefined;
+
+  ngOnDestroy(): void {
+    console.log('--COMPONENTE 2 - ngOnDestroy');
+  }
 
   ngAfterContentChecked(): void {
     console.log('--COMPONENTE 2 - ngAfterContentChecked');
