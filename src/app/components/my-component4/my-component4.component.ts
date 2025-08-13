@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-component4',
-  standalone: true,
-  imports: [],
   templateUrl: './my-component4.component.html',
   styleUrl: './my-component4.component.scss',
 })
-export class MyComponent4Component {}
+export class MyComponent4Component {
+  @Input() titulo: string | undefined;
+}
