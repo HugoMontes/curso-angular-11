@@ -38,4 +38,9 @@ export class HerosComponent implements OnInit, AfterViewInit {
   showMessage() {
     console.log('Esto es un mensaje');
   }
+
+  keyUp(event: KeyboardEvent) {
+    // console.log(event.key);
+    this.titulo += event.key;
+  }
 }
