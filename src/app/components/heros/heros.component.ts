@@ -47,4 +47,8 @@ export class HerosComponent implements OnInit, AfterViewInit {
   getMaxLength() {
     return 3;
   }
+
+  getChangeColor() {
+    return this.titulo === 'Hello World';
+  }
 }
