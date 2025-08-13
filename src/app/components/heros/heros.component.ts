@@ -43,4 +43,8 @@ export class HerosComponent implements OnInit, AfterViewInit {
     // console.log(event.key);
     this.titulo += event.key;
   }
+
+  getMaxLength() {
+    return 3;
+  }
 }
