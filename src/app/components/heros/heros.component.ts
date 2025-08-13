@@ -13,11 +13,13 @@ import {
 })
 export class HerosComponent implements OnInit, AfterViewInit {
   titulo = 'Hello World';
+  disableInput = true;
   @ViewChild('miH1') miH1: ElementRef | undefined;
 
   ngOnInit(): void {
     setTimeout(() => {
       this.titulo = 'Hola desde ngOnInit';
+      this.disableInput = false;
     }, 1500);
     console.log(this.miH1);
   }
