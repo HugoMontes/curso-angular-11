@@ -14,6 +14,8 @@ import {
 export class HerosComponent implements OnInit, AfterViewInit {
   titulo = 'Hello World';
   disableInput = true;
+  color = 'red';
+
   @ViewChild('miH1') miH1: ElementRef | undefined;
 
   ngOnInit(): void {

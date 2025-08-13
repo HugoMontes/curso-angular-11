@@ -11,7 +11,11 @@
   />
 
   <!-- <app-my-component4 [titulo]="titulo"></app-my-component4> -->
-  <button [class.cambiar-color]="getChangeColor()" (click)="showMessage()">
+  <button
+    [style.color]="color"
+    [class.cambiar-color]="getChangeColor()"
+    (click)="showMessage()"
+  >
     GUARDAR
   </button>
 </div>
