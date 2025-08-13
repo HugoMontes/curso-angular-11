@@ -1,8 +1,9 @@
 <div class="container">
   <h1 #miH1>Registro de Heroes</h1>
-  {{ titulo }}
-  <p>La suma es: {{ getSuma(5, 6) }}</p>
+  <!-- {{ titulo }}
+  <p>La suma es: {{ getSuma(5, 6) }}</p> -->
   <input type="text" [disabled]="disableInput" />
 
-  <app-my-component4 [titulo]="titulo"></app-my-component4>
+  <!-- <app-my-component4 [titulo]="titulo"></app-my-component4> -->
+  <button (click)="showMessage()">GUARDAR</button>
 </div>

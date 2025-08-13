@@ -34,4 +34,8 @@ export class HerosComponent implements OnInit, AfterViewInit {
   getSuma(numero1: number, numero2: number): number {
     return numero1 + numero2;
   }
+
+  showMessage() {
+    console.log('Esto es un mensaje');
+  }
 }
