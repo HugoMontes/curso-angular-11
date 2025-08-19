@@ -76,5 +76,10 @@
       <td>{{ myDate }}</td>
       <td>{{ myDate | date: "dd/mm/YYYY HH:mm:ss" }}</td>
     </tr>
+    <tr>
+      <td>Custom Currency</td>
+      <td>{{ currencyNumber }}</td>
+      <td>{{ currencyNumber | customCurrency: ".2-2" }}</td>
+    </tr>
   </table>
 </div>

@@ -6,6 +6,7 @@ import { MyComponent3Component } from './my-component3/my-component3.component';
 import { HerosComponent } from './heros/heros.component';
 import { MyComponent4Component } from './my-component4/my-component4.component';
 import localeEsBo from '@angular/common/locales/es-BO';
+import { CustomCurrencyPipe } from './custom-currency.pipe';
 
 registerLocaleData(localeEsBo);
 
@@ -16,6 +17,7 @@ registerLocaleData(localeEsBo);
     MyComponent3Component,
     MyComponent4Component,
     HerosComponent,
+    CustomCurrencyPipe,
   ],
   imports: [CommonModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es-BO' }],
