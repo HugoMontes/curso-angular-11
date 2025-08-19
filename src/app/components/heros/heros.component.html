@@ -2,13 +2,11 @@
   <h1 #miH1>Registro de Heroes</h1>
   {{ titulo }}
   <!-- <p>La suma es: {{ getSuma(5, 6) }}</p> -->
-  <input
-    [attr.maxLength]="getMaxLength()"
-    [attr.disabled]="disableInput ? '' : null"
-    type="text"
-    [disabled]="disableInput"
-    (keyup)="keyUp($event)"
-  />
+  <input [(ngModel)]="directivaNgModel" type="text" [disabled]="disableInput" />
+  <label for="" [ngStyle]="myNgStyle">Probando NgStyle</label>
+  <label for="" [ngClass]="{ 'cambiar-color-label': myNgClass }">
+    Probando NgClass
+  </label>
 
   <!-- <app-my-component4 [titulo]="titulo"></app-my-component4> -->
   <button

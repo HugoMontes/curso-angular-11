@@ -25,12 +25,20 @@ export class HerosComponent implements OnInit, AfterViewInit {
   });
   myDate = new Date();
 
+  /*
+   * Directivas
+   */
+  directivaNgModel = '';
+  myNgStyle = { color: 'red', 'font-size': '2em', 'font-weight': 'bold' };
+  myNgClass = false;
+
   @ViewChild('miH1') miH1: ElementRef | undefined;
 
   ngOnInit(): void {
     setTimeout(() => {
       this.titulo = 'Hola desde ngOnInit';
       this.disableInput = false;
+      this.myNgClass = true;
     }, 1500);
     console.log(this.miH1);
   }
