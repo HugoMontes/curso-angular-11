@@ -15,6 +15,15 @@ export class HerosComponent implements OnInit, AfterViewInit {
   titulo = 'Hello World';
   disableInput = true;
   color = 'red';
+  decimalPrueba = 10;
+  currencyNumber = 1000;
+  myJson = { name: 'Juan', age: 12 };
+  myPromise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('Esto es una promesa');
+    }, 3000);
+  });
+  myDate = new Date();
 
   @ViewChild('miH1') miH1: ElementRef | undefined;
 

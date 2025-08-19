@@ -18,4 +18,63 @@
   >
     GUARDAR
   </button>
+
+  <h3>PIPES</h3>
+  <table>
+    <tr>
+      <td>PIPE</td>
+      <td>VALUE</td>
+      <td>RESULT</td>
+    </tr>
+    <tr>
+      <td>UpperCase</td>
+      <td>{{ titulo }}</td>
+      <td>{{ titulo | uppercase }}</td>
+    </tr>
+    <tr>
+      <td>LowerCase</td>
+      <td>{{ titulo }}</td>
+      <td>{{ titulo | lowercase }}</td>
+    </tr>
+    <tr>
+      <td>Slice</td>
+      <td>{{ titulo }}</td>
+      <td>{{ titulo | slice: 5 : 15 }}</td>
+    </tr>
+    <tr>
+      <td>Decimal Simple</td>
+      <td>{{ decimalPrueba }}</td>
+      <td>{{ decimalPrueba | number }}</td>
+    </tr>
+    <tr>
+      <td>Decimal con decimales</td>
+      <td>{{ decimalPrueba }}</td>
+      <td>{{ decimalPrueba | number: "1.2-5" }}</td>
+    </tr>
+    <tr>
+      <td>Percent</td>
+      <td>{{ decimalPrueba }}</td>
+      <td>{{ decimalPrueba | percent }}</td>
+    </tr>
+    <tr>
+      <td>Currency Simple</td>
+      <td>{{ currencyNumber }}</td>
+      <td>{{ currencyNumber | currency: "BOB" }}</td>
+    </tr>
+    <tr>
+      <td>JSON</td>
+      <td>{{ myJson }}</td>
+      <td>{{ myJson | json }}</td>
+    </tr>
+    <tr>
+      <td>Async</td>
+      <td>{{ myPromise }}</td>
+      <td>{{ myPromise | async }}</td>
+    </tr>
+    <tr>
+      <td>Date</td>
+      <td>{{ myDate }}</td>
+      <td>{{ myDate | date: "dd/mm/YYYY HH:mm:ss" }}</td>
+    </tr>
+  </table>
 </div>
