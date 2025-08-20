@@ -16,6 +16,7 @@ export class HerosDirectiveStructComponent implements OnInit, AfterViewInit {
   @ViewChild('miBoton') miBoton: ElementRef | undefined;
   showButtonSave = false;
   textoInput = '';
+  heroeSeleccionado: IHeroe = { id: 0, name: '' } as IHeroe;
   myArrayHeroes: IHeroe[] = [
     { id: 1, name: 'Superman' },
     { id: 2, name: 'Batman' },
@@ -57,6 +58,11 @@ export class HerosDirectiveStructComponent implements OnInit, AfterViewInit {
 
   trackByHero(index: number, hero: IHeroe): number {
     return hero.id;
+  }
+
+  seleccionarHeroe(heroe: IHeroe): void {
+    this.heroeSeleccionado = heroe;
+    console.log(this.heroeSeleccionado);
   }
 }
 

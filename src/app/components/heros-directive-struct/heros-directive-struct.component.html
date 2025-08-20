@@ -9,12 +9,18 @@
       <td>#</td>
       <td>Heroe</td>
       <!-- <td>Indice</td> -->
+      <td>Accion</td>
     </tr>
     <!-- <tr *ngFor="let hero of myArrayHeroes; let indice = index"> -->
     <tr *ngFor="let hero of myArrayHeroes; trackBy: trackByHero">
       <td>{{ hero.id }}</td>
       <td>{{ hero.name }}</td>
       <!-- <td>{{ indice }}</td> -->
+      <td><button (click)="seleccionarHeroe(hero)">Seleccionar</button></td>
     </tr>
   </table>
+
+  <div [ngSwitch]="heroeSeleccionado.id">
+    <h3 *ngSwitchCase="3">ESTE ES EL HEROE SELECCIONADO!!</h3>
+  </div>
 </div>
