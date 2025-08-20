@@ -2,4 +2,17 @@
   <h1>Registro de heroes</h1>
   <input type="text" />
   <button #miBoton *ngIf="showButtonSave">GUARDAR</button>
+
+  <table>
+    <tr>
+      <td>#</td>
+      <td>Heroe</td>
+      <td>Indice</td>
+    </tr>
+    <tr *ngFor="let hero of myArrayHeroes; let indice = index">
+      <td>{{ hero.id }}</td>
+      <td>{{ hero.name }}</td>
+      <td>{{ indice }}</td>
+    </tr>
+  </table>
 </div>

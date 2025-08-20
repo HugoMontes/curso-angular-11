@@ -15,6 +15,11 @@ import {
 export class HerosDirectiveStructComponent implements OnInit, AfterViewInit {
   @ViewChild('miBoton') miBoton: ElementRef | undefined;
   showButtonSave = false;
+  myArrayHeroes = [
+    { id: 1, name: 'Superman' },
+    { id: 2, name: 'Batman' },
+    { id: 3, name: 'Spiderman' },
+  ];
 
   constructor(private detecChange: ChangeDetectorRef) {}
 
