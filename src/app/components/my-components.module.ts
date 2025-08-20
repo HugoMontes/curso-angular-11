@@ -8,6 +8,7 @@ import { MyComponent4Component } from './my-component4/my-component4.component';
 import localeEsBo from '@angular/common/locales/es-BO';
 import { CustomCurrencyPipe } from './custom-currency.pipe';
 import { FormsModule } from '@angular/forms';
+import { HerosDirectiveStructComponent } from './heros-directive-struct/heros-directive-struct.component';
 
 registerLocaleData(localeEsBo);
 
@@ -19,6 +20,7 @@ registerLocaleData(localeEsBo);
     MyComponent4Component,
     HerosComponent,
     CustomCurrencyPipe,
+    HerosDirectiveStructComponent,
   ],
   imports: [CommonModule, FormsModule],
   providers: [{ provide: LOCALE_ID, useValue: 'es-BO' }],
@@ -27,6 +29,7 @@ registerLocaleData(localeEsBo);
     MyComponent2Component,
     MyComponent3Component,
     HerosComponent,
+    HerosDirectiveStructComponent,
   ],
 })
 export class MyComponentsModule {}
