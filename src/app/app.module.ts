@@ -5,22 +5,17 @@ import { RouterModule } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatButtonModule } from '@angular/material/button';
 import { MyComponentsModule } from './components/my-components.module';
-// import { MyComponent1Component } from './components/my-component1/my-component1.component';
-// import { MyComponent2Component } from './components/my-component2/my-component2.component';
+import { DemoService } from './demo.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    // MyComponent1Component,
-    // MyComponent2Component
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([]),
     MatButtonModule,
     MyComponentsModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), DemoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
