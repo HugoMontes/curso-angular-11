@@ -23,4 +23,11 @@
   <div [ngSwitch]="heroeSeleccionado.id">
     <h3 *ngSwitchCase="3">ESTE ES EL HEROE SELECCIONADO!!</h3>
   </div>
+
+  <label for="" *ngIf="showButtonSave; else templateHola">
+    Demostracion template
+  </label>
+  <ng-template #templateHola>
+    <h4>Hola, soy un Template</h4>
+  </ng-template>
 </div>
