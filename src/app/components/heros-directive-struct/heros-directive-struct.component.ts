@@ -15,7 +15,8 @@ import {
 export class HerosDirectiveStructComponent implements OnInit, AfterViewInit {
   @ViewChild('miBoton') miBoton: ElementRef | undefined;
   showButtonSave = false;
-  myArrayHeroes = [
+  textoInput = '';
+  myArrayHeroes: IHeroe[] = [
     { id: 1, name: 'Superman' },
     { id: 2, name: 'Batman' },
     { id: 3, name: 'Spiderman' },
@@ -36,4 +37,30 @@ export class HerosDirectiveStructComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     console.log(this.miBoton);
   }
+
+  addHero() {
+    // Obtener el id mayor
+    const objetoMayor = this.myArrayHeroes.reduce((prev, current) =>
+      prev.id > current.id ? prev : current,
+    );
+    // Añadir un nuevo heroe
+    this.myArrayHeroes.push({ id: objetoMayor.id + 1, name: this.textoInput });
+  }
+
+  actualizarHeroes() {
+    this.myArrayHeroes = [
+      { id: 1, name: 'SUPERMAN' },
+      { id: 2, name: 'Batman' },
+      { id: 3, name: 'Spiderman' },
+    ];
+  }
+
+  trackByHero(index: number, hero: IHeroe): number {
+    return hero.id;
+  }
+}
+
+interface IHeroe {
+  id: number;
+  name: string;
 }
