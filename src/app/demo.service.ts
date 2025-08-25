@@ -7,4 +7,8 @@ export class DemoService {
   constructor() {
     console.log('***ESTE ES EL CONSTRUCTOR DEL SERVICIO DEMO');
   }
+
+  saludo() {
+    console.log('Hello!!!...');
+  }
 }
